@@ -1,0 +1,67 @@
+{
+  "Zone A": {
+    "lat" : 53,
+    "lng" : -1,
+    "limiting radius" : 5,
+    "Trip 1":[{
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      },
+      {
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      }
+      ],
+          "Trip 2":[{
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      },
+      {
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      }
+      ],
+          "Trip 3":[{
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      },
+      {
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      }
+      ],
+          "Trip 4":[{
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      },
+      {
+      "audiofile id": "Bob Mon",
+        "reuquired":true,
+        "event dependant": true,
+        "caracters": ["Bob","Mike","Sarah"],
+        "Category":"trees"
+      }
+      ]
+  }
+}
