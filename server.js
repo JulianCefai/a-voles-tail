@@ -4,6 +4,9 @@ const fs = require('fs')
 //Make  a new express app. Config done later, no arguments passed to express
 var app = express()
 
+//Store port used for app either set by heroku as a global env or default 3000
+const post = process.env.PORT || 3000
+
 //Add middleware to create static directory with multimedia to serve. Pass absolute file path to public
 app.use(express.static(__dirname + '/public'));
 
@@ -29,4 +32,4 @@ app.get('/',(req,res) => {
 });
 
 //Start Listening at port 3000 for local dev
-app.listen(3000);
+app.listen(port);
