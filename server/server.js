@@ -9,7 +9,7 @@ var app = express();
 const port = process.env.PORT || 3000;
 //set port for heroku
 
-//set up http route by callin app.post passing in URL and callback that gets called with request and response. for now routing to create audiofile entry.
+//set up http route by callin app.post passing in URdsaL and callback that gets called with request and response. for now routing to create audiofile entry.
 //Body parser used to convert JSON to object. Configure middleware using app.use and will be able to send JSON to express
 app.use(bodyParser.json());
 
