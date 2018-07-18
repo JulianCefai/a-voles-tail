@@ -38,7 +38,7 @@ app.get('/audioFilePlayed', (req,res) => {
 app.get('/audioFilePlayed/:audiofileid', (req,res) => {
   var id = req.params.audiofileid;
   audioFile.find({audioFileID: id}).then((audio_file)=> {
-    if (!audioFile){
+    if (!audio_file){
       return res.status(404).send()
     }
     res.send({audio_file});
@@ -46,6 +46,18 @@ app.get('/audioFilePlayed/:audiofileid', (req,res) => {
     res.status(400).send();
   })
 
+});
+
+app.delete('/audioFilePlayed/:audiofileid', (req,res) => {
+  var audio_id = req.params.audiofileid;
+  audioFile.findOneAndRemove({audioFileID: audio_id}).then((audio_file) => {
+    if (!audio_file){
+      return res.status(404).send()
+    }
+    res.send({audio_file});
+  }).catch((e) => {
+    res.status(400).send();
+  })
 });
 
 //open on local port for Now
