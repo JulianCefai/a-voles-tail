@@ -50,7 +50,7 @@ app.get('/audioFilePlayed/:audiofileid', (req,res) => {
 
 //open on local port for Now
 
-app.listen(port, () => {
+app.listen((process.env.PORT || 3000), () => {
   console.log('The port is', port);
   console.log(`Started on port ${port}`);
 });
