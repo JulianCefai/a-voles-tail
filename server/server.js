@@ -1,14 +1,14 @@
 //destructuring syntax used to make a variable from the parameter named mongoose of the required file which was set as an export
-var {mongoose} = require('./db/mongoose.js')
-var {audioFile} = require('./models/audioFile')
+var {mongoose} = require('./db/mongoose.js');
+var {audioFile} = require('./models/audiofile');
 
 //express for networking, body parser for parsin JSON
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-
-//set port for heroku
 const port = process.env.PORT || 3000;
+//set port for heroku
+
 //set up http route by callin app.post passing in URL and callback that gets called with request and response. for now routing to create audiofile entry.
 //Body parser used to convert JSON to object. Configure middleware using app.use and will be able to send JSON to express
 app.use(bodyParser.json());
@@ -50,8 +50,9 @@ app.get('/audioFilePlayed/:audiofileid', (req,res) => {
 
 //open on local port for Now
 
-app.listen(port,'0.0.0.0', () => {
-  console.log('Started on port ${port}');
+app.listen(port, () => {
+  console.log('The port is', port);
+  console.log(`Started on port ${port}`);
 });
 
 module.exports = {app};
