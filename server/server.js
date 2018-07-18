@@ -3,8 +3,9 @@ var {mongoose} = require('./db/mongoose.js');
 var {audioFile} = require('./Models/audiofile.js');
 
 //express for networking, body parser for parsin JSON
-var express = require('express');
-var bodyParser = require('body-parser');
+const _ = require('lodash');
+const express = require('express');
+const bodyParser = require('body-parser');
 var app = express();
 const port = process.env.PORT || 3000;
 //set port for heroku
@@ -59,6 +60,24 @@ app.delete('/audioFilePlayed/:audiofileid', (req,res) => {
     res.status(400).send();
   })
 });
+//used for updating
+app.patch('/audioFilePlayed/:audiofileid', (req,res) => {
+  var audio_id = req.params.audiofileid;
+  //pick allow to choose from passed params which get updated
+  var body = _.pick(req.body,['audioFileID','played','category']);
+  if (!audio_id){
+    return res.status(404).send()
+  }
+  audioFile.findOneAndUpdate({audioFileID: audio_id },{$set:body},{new: true}).then((audiofile) => {
+  if(!audiofile){
+    return res.status(404).send()
+  }
+  res.send({audiofile});
+}).catch((e) => {
+  res.status(400).send()
+})
+});
+
 
 //open on local port for Now
 
