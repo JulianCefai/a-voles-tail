@@ -1,6 +1,6 @@
 //destructuring syntax used to make a variable from the parameter named mongoose of the required file which was set as an export
 var {mongoose} = require('./db/mongoose.js');
-var {audioFile} = require('./models/audiofile');
+var {audioFile} = require('./models/audiofile.js');
 
 //express for networking, body parser for parsin JSON
 var express = require('express');
